@@ -182,6 +182,8 @@ type Config struct {
 	MetricsReportStatsdServer     string            `toml:"metrics_report_statsd_server" json:"metrics_report_statsd_server"`
 	MetricsReportStatsdPeriod     timesize.Duration `toml:"metrics_report_statsd_period" json:"metrics_report_statsd_period"`
 	MetricsReportStatsdPrefix     string            `toml:"metrics_report_statsd_prefix" json:"metrics_report_statsd_prefix"`
+	MetricsReportOpenTSDBServer   string            `toml:"metrics_report_open_tsdb_server" json:"metrics_report_open_tsdb_server"`
+	MetricsReportOpenTSDBPeriod   timesize.Duration `toml:"metrics_report_open_tsdb_server" json:"metrics_report_open_tsdb_period"`
 }
 
 func NewDefaultConfig() *Config {

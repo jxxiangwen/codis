@@ -129,12 +129,13 @@ func (s *Proxy) setup(config *Config) error {
 		}
 		s.model.AdminAddr = x
 	}
-
+	// mac地址和监听地址等的md5值
 	s.model.Token = rpc.NewToken(
 		config.ProductName,
 		s.lproxy.Addr().String(),
 		s.ladmin.Addr().String(),
 	)
+	// 传入参数转换格式后的sha256值
 	s.xauth = rpc.NewXAuth(
 		config.ProductName,
 		config.ProductAuth,
